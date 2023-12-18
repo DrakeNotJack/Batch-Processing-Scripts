@@ -1,0 +1,97 @@
+$file = "FileName.csv"
+$rowCount = 0
+$fileCount = 1
+$outFile = "FileName1.csv"
+
+Get-Content $file -ReadCount 500000 | ForEach-Object {
+    $rowCount += $_.Count
+    $outFile = "TFileName$fileCount.csv"
+    $_ | Set-Content $outFile
+    if ($rowCount -ge 500000) {
+        $rowCount = 0
+        $fileCount += 1
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Scripts running, don't touch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
